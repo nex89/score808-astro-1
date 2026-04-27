@@ -1,0 +1,68 @@
+---
+// Bagian Frontmatter (Tempat Logika/Data)
+const title = "Score808: Nonton Live Streaming Bola HD Tanpa Buffering 2026";
+const description = "Link alternatif Score808 terbaru. Nikmati tayangan Liga Inggris, La Liga, dan BRI Liga 1 kualitas HD gratis.";
+
+const matches = [
+	{ home: "Chelsea", away: "Newcastle", time: "19:10 WIB", league: "PREMIER LEAGUE", viewers: "22K", link: "#" },
+	{ home: "Real Madrid", away: "Valencia", time: "20:00 WIB", league: "LA LIGA", viewers: "41K", link: "#" },
+	{ home: "Napoli", away: "AC Milan", time: "20:15 WIB", league: "SERIE A", viewers: "58K", link: "#" }
+];
+---
+
+<!doctype html>
+<html lang="id">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<style>
+			:root { --accent: #00ff88; --bg: #020617; --card: #0f172a; }
+			body { background: var(--bg); color: white; font-family: sans-serif; margin: 0; padding: 0; }
+			header { padding: 40px 20px; text-align: center; background: black; border-bottom: 2px solid var(--accent); }
+			main { max-width: 1100px; margin: auto; padding: 20px; }
+			.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 30px; }
+			.card { background: var(--card); border: 1px solid #1e293b; border-radius: 12px; padding: 20px; text-align: center; transition: 0.3s; }
+			.card:hover { border-color: var(--accent); transform: translateY(-5px); }
+			.badge { background: var(--accent); color: black; font-weight: bold; padding: 4px 10px; border-radius: 4px; font-size: 12px; }
+			.btn { display: block; background: white; color: black; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 15px; }
+			.btn:hover { background: var(--accent); }
+			.seo-content { margin-top: 60px; line-height: 1.8; color: #94a3b8; border-top: 1px solid #1e293b; pt: 40px; }
+			h1, h2 { color: var(--accent); }
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1 style="margin:0; font-size: 2.5rem; letter-spacing: -1px;">SCORE808 OFFICIAL</h1>
+			<p style="color: #64748b;">Nonton Bola HD & Skor Real-Time Terlengkap 2026</p>
+		</header>
+
+		<main>
+			<div class="grid">
+				{matches.map((match) => (
+					<div class="card">
+						<div style="display:flex; justify-content: space-between; margin-bottom:15px;">
+							<span class="badge">{match.league}</span>
+							<span style="color:#475569; font-size:12px;">LIVE NOW</span>
+						</div>
+						<h3 style="font-size: 1.5rem; margin: 10px 0;">{match.home} vs {match.away}</h3>
+						<p style="color: #94a3b8;">Kick Off: {match.time}</p>
+						<div style="color: var(--accent); font-size: 13px; margin: 10px 0;">⚡ {match.viewers} Penonton Aktif</div>
+						<a href={match.link} class="btn">NONTON HD LIVE</a>
+					</div>
+				))}
+			</div>
+
+			<article class="seo-content">
+				<h2>Eksistensi Score808 di Tahun 2026</h2>
+				<p>Memasuki tahun 2026, <strong>Score808</strong> tetap mengukuhkan posisinya sebagai platform hiburan olahraga digital paling dicari. Kami menyadari bahwa antusiasme pendukung tim besar seperti <strong>Real Madrid</strong> dan Manchester City membutuhkan layanan yang tidak hanya gratis, tetapi juga stabil.</p>
+				<p>Sebagai situs yang mengutamakan kenyamanan, Score 808 menyediakan navigasi intuitif tanpa iklan pop-up yang mengganggu. Fokus kami adalah menghadirkan siaran <strong>Liga Champions</strong>, Liga Inggris, dan BRI Liga 1 dengan standar kualitas internasional secara cuma-cuma.</p>
+			</article>
+		</main>
+
+		<footer style="text-align:center; padding: 50px; color: #475569; font-size: 14px;">
+			&copy; 2026 Score808 Ecosystem. All Rights Reserved.
+		</footer>
+	</body>
+</html>
