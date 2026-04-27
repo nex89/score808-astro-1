@@ -1,0 +1,43 @@
+---
+// src/pages/nonton.astro
+---
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live Streaming - Score808</title>
+    <style>
+        body { margin: 0; padding: 0; background: #000; color: white; font-family: sans-serif; }
+        .container { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; padding: 20px; }
+        .player-wrapper { width: 100%; max-width: 900px; aspect-ratio: 16/9; background: #111; border: 2px solid #333; position: relative; }
+        iframe { width: 100%; height: 100%; border: none; }
+        .back-link { margin-top: 20px; color: #00ff88; text-decoration: none; font-weight: bold; }
+        .back-link:hover { text-decoration: underline; }
+        h2 { color: #00ff88; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Sinyal HD Sedang Dimuat...</h2>
+        
+        <div class="player-wrapper">
+            <iframe 
+                src="https://cukurukuk.co" 
+                allow="autoplay; encrypted-media" 
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <a href="/" class="back-link">← Kembali ke Jadwal Pertandingan</a>
+    </div>
+
+    <script is:inline>
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
+        document.onkeydown = function(e) {
+            if (e.ctrlKey && (e.keyCode === 85 || e.keyCode === 83 || e.keyCode === 73)) return false;
+            if (e.keyCode === 123) return false;
+        };
+    </script>
+</body>
+</html>

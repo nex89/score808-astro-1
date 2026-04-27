@@ -3,10 +3,11 @@
 const title = "Score808: Nonton Live Streaming Bola HD Tanpa Buffering 2026";
 const description = "Link alternatif Score808 terbaru. Nikmati tayangan Liga Inggris, La Liga, dan BRI Liga 1 kualitas HD gratis.";
 
+// Di src/pages/index.astro, cari bagian matches:
 const matches = [
-	{ home: "Chelsea", away: "Newcastle", time: "19:10 WIB", league: "PREMIER LEAGUE", viewers: "22K", link: "https://cukurukuk.co" },
-	{ home: "Real Madrid", away: "Valencia", time: "20:00 WIB", league: "LA LIGA", viewers: "41K", link: "https://cukurukuk.co" },
-	{ home: "Napoli", away: "AC Milan", time: "20:15 WIB", league: "SERIE A", viewers: "58K", link: "https://cukurukuk.co" }
+    { home: "Chelsea", away: "Newcastle", ..., link: "/nonton" },
+    { home: "Real Madrid", away: "Valencia", ..., link: "/nonton" },
+    { home: "Napoli", away: "AC Milan", ..., link: "/nonton" }
 ];
 ---
 
@@ -64,5 +65,20 @@ const matches = [
 		<footer style="text-align:center; padding: 50px; color: #475569; font-size: 14px;">
 			&copy; 2026 Score808 Ecosystem. All Rights Reserved.
 		</footer>
+		<script is:inline>
+			// Mematikan Klik Kanan
+			document.addEventListener('contextmenu', (e) => e.preventDefault());
+		  
+			// Mematikan Shortcut CTRL+U, CTRL+S, CTRL+I (Inspect Element)
+			document.onkeydown = function(e) {
+			  if (e.ctrlKey && 
+				  (e.keyCode === 67 || // Ctrl+C
+				   e.keyCode === 85 || // Ctrl+U
+				   e.keyCode === 83 || // Ctrl+S
+				   e.keyCode === 123)) { // F12
+				return false;
+			  }
+			};
+		  </script>
 	</body>
 </html>
